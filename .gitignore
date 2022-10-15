@@ -8,3 +8,4 @@ __pycache__
 /error-dj.log
 /.DS_Store
 /ask.new/
+/ask/qa/migrations/*.py
