@@ -1,0 +1,10 @@
+uploads/test.js
+__pycache__
+/ask/*.log
+*.pyc
+/ask.old/
+/~./
+/access-dj.log
+/error-dj.log
+/.DS_Store
+/ask.new/

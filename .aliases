@@ -1,0 +1,2 @@
+alias l='ls -la --color'
+alias nr='sudo /etc/init.d/nginx restart'
