@@ -1,1 +1,2 @@
-# assignment_2.11
+#+TITLE: wtech labs
+* 2.3.11 Создание моделей в Django приложении
