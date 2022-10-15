@@ -4,12 +4,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+
 class Question(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     added_at = models.DateField()
     rating = models.IntegerField(default=0)
-    author = models.ForeignKey(User,related_name='q_author_user',on_delete=models.CASCADE)
+    author = models.ForeignKey(User, related_name='q_author_user',
+                               on_delete=models.CASCADE, null=True)
     likes = models.ManyToManyField(User, related_name='q_likes_users')
     # objects = QuestionManager()
 
@@ -21,7 +23,6 @@ class Question(models.Model):
 
     def get_abdolute_url(self):
         return '/question/%d/' % self.pk
-
 
     class Meta():
         db_table = 'question'
