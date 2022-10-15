@@ -8,9 +8,11 @@ class Question(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     added_at = models.DateField()
-    rating = models.IntegerField()
-    author = models.ForeignKey(User,related_name='q_author_user')
-    likes = models.ManyToManyField(User,related_name='q_likes_users')
+    rating = models.IntegerField(default=0)
+    author = models.ForeignKey(User,related_name='q_author_user',on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, related_name='q_likes_users')
+    # objects = QuestionManager()
+
     def __str__(self):
         return self.title
 
