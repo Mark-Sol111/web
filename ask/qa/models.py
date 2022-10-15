@@ -9,7 +9,7 @@ class Question(models.Model):
     text = models.TextField()
     added_at = models.DateField()
     rating = models.IntegerField()
-    author = User()
+    author = models.ForeignKey(User)
     likes = models.ManyToManyField(User)
     def __str__(self):
         return self.title
